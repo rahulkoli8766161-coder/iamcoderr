@@ -1,0 +1,50 @@
+import sys
+import time
+import random
+
+def print_lyrics():
+    lyrics = [
+        "Hoke tetho duur mein",
+        "Khoya apne aap nu",
+        "Adda hissa mere dil da",
+        "Hoeya tere khilaaf kyun",
+        "Adda dil chaunda ae tenu",
+        "Karni chaunda baat kyun",
+        "Tareyaan di roshni de wangu",
+        "Gal nal laaja raat nu",
+        "Dil mere nu samjhaja",
+        "Hathan wich hath tu paaja",
+        "Pehlan jo dekhi nahi mein",
+        "Aaisi duniya tu dikhaa ja"
+    ]
+
+   
+    delays = [
+        1.5, 1.5, 
+        1.8, 2.0, 
+        1.8, 1.8,
+        2.2, 2.5, 
+        1.8, 1.8, 
+        1.8, 3.0  
+    ]
+
+    print("--- Talwiinder - Wishes ---")
+    print("      (Emotional Verse)\n")
+    time.sleep(2.0)
+
+    for i, line in enumerate(lyrics):
+        for char in line:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+           
+            time.sleep(0.08)
+        
+        print()
+        if i < len(delays):
+            time.sleep(delays[i])
+
+if __name__ == "__main__":
+    try:
+        print_lyrics()
+    except KeyboardInterrupt:
+        print("\n[Stopped]")

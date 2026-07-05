@@ -1,0 +1,58 @@
+import sys
+import time
+
+def print_lyrics():
+    lyrics = [
+        "Alguj vaajanya nabhaat",
+        "Bhaltanch jhaalanya aaj",
+        "Algad aali manaat",
+        "Pahilich tarani hi laaj",
+        "Ho aga jhananalanya kaaljaamandi",
+        "Aani haatamandi haat aala ji",
+        "Sairat jhaala jiiiiii",
+        "Sairat jhaala jiiiii",
+        "Sairat jhaala jiiii",
+        "Han badalun gelanya saara",
+        "Pirticha sutlanya vaara",
+        "Allad bhambavlyala",
+        "Billori pakharu nyara",
+        "Aala manatla hya vhotamandi",
+        "An hatamandi hat ala ji",
+        "Sairat jhaala jiiiiii",
+        "Sairat jhaala jiiiii",
+        "Sairat jhaala jiiii"
+
+    ]
+
+    
+    delays = [
+        3.5, 3.8, 
+        3.5, 2.8, 
+        4.5, 3.8, 
+        3.5, 2.2, 
+        4.2, 3.8, 
+        2.2, 3.5,
+        2.4, 2.6,
+        2,7, 2,5,
+        3.5, 2.4  
+    ]
+
+    print("Sairat jhaala ji- by Ajay - Atul \n")
+    time.sleep(1.2)
+
+    for i, line in enumerate(lyrics):
+        for char in line:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            
+            time.sleep(0.06)
+        
+        print()
+        if i < len(delays):
+            time.sleep(delays[i])
+
+if __name__ == "__main__":
+    try:
+        print_lyrics()
+    except KeyboardInterrupt:
+        print("\n[Stopped]")

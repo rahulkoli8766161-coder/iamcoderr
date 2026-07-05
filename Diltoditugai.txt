@@ -1,0 +1,45 @@
+import sys
+import time
+
+def print_lyrics():
+    lyrics = [
+        "Haat dusrana tu dhari gai",
+        "Maale sodi tu gai male sodi tu gai",
+        "Khot kari gai male raani",
+        "Dil todi tu dil todi tu gai",
+        "Tuna pyarma ye raani",
+        "Yeda vhayana mi",
+        "Tuna pyarma ye raani",
+        "Yeda vhayana mi",
+        "Java dekhana haat ni mehendi",
+        "kasa radat basna mi",
+        "Java dekhana haat ni mehendi",
+        "kasa radat basna mi"
+    ]
+    
+    delays = [
+        3.2, 3.8, 3.5, 4.0,
+        2.8, 3.2, 2.8, 4.2,
+        3.5, 4.0, 3.5, 4.5
+    ]
+
+    print("Dil Todi Gayi Ye Rani (Ahirani Sad Song)\n")
+    time.sleep(1.5)
+
+    for i, line in enumerate(lyrics):
+        for char in line:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            
+            # 0.075 speed mule typewriter animation nivaant ani emotional disel
+            time.sleep(0.075)
+        
+        print()
+        if i < len(delays):
+            time.sleep(delays[i])
+
+if __name__ == "__main__":
+    try:
+        print_lyrics()
+    except KeyboardInterrupt:
+        print("\n[Stopped]")

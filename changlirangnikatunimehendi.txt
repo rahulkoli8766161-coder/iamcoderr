@@ -1,0 +1,54 @@
+import sys
+import time
+
+def print_lyrics():
+    lyrics = [
+        "changli rangni ka tuni mehendi",
+        "tyana nav ni", 
+        "hay kayamna sodi jasu", 
+        "tuna pyar mi", 
+        "changli rangni ka tuni mehendi", 
+        "tyana nav ni", 
+        "hay kayamna sodi jasu", 
+        "tuna pyar mi", 
+        "sada khushi ma raho tuna joda",
+        "ashi duva dey mi", 
+        "sada khushi ma raho tuna joda", 
+        "ashi duva dey miii.......", 
+        "dhoke baaj sang rahi rahi", 
+        "dhoke baaj vhi gai", 
+        "dhoke baaj sang rahi rahi", 
+        "dhoke baaj vhi gai"
+    ]
+
+    
+    delays = [
+        3.5, 3.8, 
+        3.5, 2.8, 
+        4.5, 3.8, 
+        3.5, 2.2, 
+        4.2, 3.8, 
+        2.2, 3.5,
+        2.4, 2.6,
+        2,7, 2,5  
+    ]
+
+    print("Vinod Kumavat - O Dilbara (Emotional Verse)\n")
+    time.sleep(1.2)
+
+    for i, line in enumerate(lyrics):
+        for char in line:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            
+            time.sleep(0.06)
+        
+        print()
+        if i < len(delays):
+            time.sleep(delays[i])
+
+if __name__ == "__main__":
+    try:
+        print_lyrics()
+    except KeyboardInterrupt:
+        print("\n[Stopped]")

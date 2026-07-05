@@ -1,0 +1,50 @@
+import sys
+import time
+
+def print_lyrics():
+    lyrics = [
+        "Padali Bhavani jevha myanachya baheri",
+        "Ranat firali na ti kadhich maghari",
+        "Takhta-daultisamor keli na lachari",
+        "Kadhi na jhukali ti Dillichya darbari",
+        "Tamam badshahicha taaj tine thokarla",
+        "Marathmolyacha vesh tine pangharla",
+        "Dharmarakshanasi sada sajj Bhavani jhali",
+        "Julumkartyachya raktane ti nhali",
+        "Maharashtrawar prem apaar",
+        "(Maharashtrawar prem apaar)",
+        "Ughadnya swatantryache dwar",
+        "(Ughadnya swatantryache dwar)",
+        "Ooo oo ooo ooo",
+        "Chamke Shivbachi talwar!"
+    ]
+    
+    delays = [
+        2.8, 2.8, 
+        3.0, 3.0, 
+        3.2, 3.2, 
+        3.5, 3.5, 
+        2.5, 2.5, 
+        2.5, 2.5,
+        2.0, 4.0
+    ]
+
+    print("Chamke Shivbachi Talwar - \n")
+    time.sleep(1.2)
+
+    for i, line in enumerate(lyrics):
+        for char in line:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            
+            time.sleep(0.06)
+        
+        print()
+        if i < len(delays):
+            time.sleep(delays[i])
+
+if __name__ == "__main__":
+    try:
+        print_lyrics()
+    except KeyboardInterrupt:
+        print("\n[Stopped]")

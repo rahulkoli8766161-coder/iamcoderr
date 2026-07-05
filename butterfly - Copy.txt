@@ -1,0 +1,31 @@
+import turtle
+import math
+
+screen = turtle.Screen()
+screen.bgcolor("black")
+t = turtle.Turtle()
+t.speed(10)
+t.hideturtle()
+t.width(2)
+
+colors = ["#FF00FF", "#8A2BE2", "#00BFFF", "#ADFF2F", "#FFD700"]
+def draw_perfect_butterfly():
+
+scale = 80
+
+for i in range(0, 1000):
+
+t_val = i * 0.1
+
+factor = (math.exp(math.cos(t_val))- 2 * math.cos(4 * t_val)- math.pow(math.sin(t_val / 12), 5))
+x = math.sin(t_val) * factor * scale
+y = math.cos(t_val) * factor * scale
+
+t.color(colors[(i // 100) % len(colors)])
+
+t.goto(x, y)
+if i == 0:
+t.pendown()
+t.penup()
+draw_perfect_butterfly()
+turtle.done()

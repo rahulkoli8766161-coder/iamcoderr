@@ -1,0 +1,41 @@
+import sys
+import time
+
+def print_lyrics():
+    lyrics = [
+        "Tu ghata hai fuaar ki",
+        "Mein ghadi intezaar ki",
+        "Apna milna likha",
+        "Issi baras hai na...",
+        "Jo meri manzilon ko jaati hai",
+        "Tere naam ki koi sadak hai na...",
+        "Jo mere dil ko dil banaati hai",
+        "Tere naam ki koi dhadak hai na..."
+    ]
+    
+    
+    delays = [
+        2.8, 3.2, 2.5, 4.0,
+        3.5, 4.2, 3.5, 4.5
+    ]
+
+    print("Dhadak  - by Ajay Gogavale\n")
+    time.sleep(1.2)
+
+    for i, line in enumerate(lyrics):
+        for char in line:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            
+           
+            time.sleep(0.075)
+        
+        print()
+        if i < len(delays):
+            time.sleep(delays[i])
+
+if __name__ == "__main__":
+    try:
+        print_lyrics()
+    except KeyboardInterrupt:
+        print("\n[Stopped]")

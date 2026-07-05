@@ -1,0 +1,39 @@
+import sys
+import time
+
+def print_lyrics():
+    lyrics = [
+        "Mana dilni rani tu tun diwana vhaynaye",
+        "Mana dilni rani tu tun diwana vhaynaye",
+        "Diwana vhaynaye rani tula pyar karnaye",
+        "Diwana vhaynaye rani tula pyar karnaye",
+        "Yaad karnaye rani tula pyar karnaye",
+        "Yaad karnaye rani tula pyar karnaye"
+    ]
+
+    delays = [
+        3.0, 4.0, 
+        4.2, 4.2, 
+        4.0, 4.0
+    ]
+
+    print("Sawan Mahina ma - by Sachin kumavat\n")
+    time.sleep(1.0)
+
+    for i, line in enumerate(lyrics):
+        for char in line:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            
+            # Character typing speed
+            time.sleep(0.07)
+        
+        print()
+        if i < len(delays):
+            time.sleep(delays[i])
+
+if __name__ == "__main__":
+    try:
+        print_lyrics()
+    except KeyboardInterrupt:
+        print("\n[Stopped]")

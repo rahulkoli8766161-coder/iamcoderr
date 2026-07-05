@@ -1,0 +1,39 @@
+import sys
+import time
+
+def print_lyrics():
+    lyrics = [
+        "Saaj hyo tujha",
+        "jeev mazha guntala ga...",
+        "Ushakhali photo tujha chaand raatila",
+        "Tujhya venitla phool maalun visavala mann.. ",
+        "Tya visavalya manalahi ghena saathila ga",
+        "Hmm.. Hmm.. Hmm.. Hmm.. Hmm.. Hmm.."
+    ]
+
+   
+    delays = [
+        2.5, 1.8, 
+        3.5, 1.8, 
+        5.5, 2.4
+            ]
+
+    print("Baban - Saaj Hyo Tuza (Emotional Verse)\n")
+    time.sleep(1.2)
+
+    for i, line in enumerate(lyrics):
+        for char in line:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            
+            time.sleep(0.06)
+        
+        print()
+        if i < len(delays):
+            time.sleep(delays[i])
+
+if __name__ == "__main__":
+    try:
+        print_lyrics()
+    except KeyboardInterrupt:
+        print("\n[Stopped]")
