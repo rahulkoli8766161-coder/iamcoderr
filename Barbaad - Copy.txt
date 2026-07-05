@@ -1,0 +1,41 @@
+import sys
+import time
+
+def print_lyrics():
+    lyrics = [
+        "Tujhse keh doon ya rehne doon,",
+        "Raaz mere sab kuch keh doon kya tujhko,",
+        "Tu chhod jaayegi ya aayegi paas mere,",
+        "Aisi baat ka dar hai mujhko,",
+        "Ke ho na jaaye pyaar tumse mujhe,",
+        "Kar dega barbaad ishq mujhe,",
+        "Ho na jaaye pyaar tumse mujhe.",
+        "Behad beshumaar tumse mujhe,",
+        "Aa aa aa hoon ho oo aa aa aa hoon ho oo"
+    ]
+    
+    delays = [
+        2.8, 3.5, 3.8, 3.2,
+        3.5, 3.2, 3.5, 3.8,
+        4.0
+    ]
+
+    print("Barbaad - Saiyaara by Jubin Nautiyal \n")
+    time.sleep(1.2)
+
+    for i, line in enumerate(lyrics):
+        for char in line:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            
+            time.sleep(0.07)
+        
+        print()
+        if i < len(delays):
+            time.sleep(delays[i])
+
+if __name__ == "__main__":
+    try:
+        print_lyrics()
+    except KeyboardInterrupt:
+        print("\n[Stopped]")

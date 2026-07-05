@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Marathi Lyrics Reveal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url('flower.png') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Rozha One', serif;
+            perspective: 1200px; /* Essential for 3D depth */
+            overflow: hidden;
+        }
+
+        .glass-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-radius: 25px;
+            padding: 40px;
+            width: 85%;
+            max-width: 550px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .lyric-line {
+            font-size: clamp(1.2rem, 4vw, 1.8rem);
+            color: #4a0404; /* Deep maroon to match the theme */
+            margin-bottom: 18px;
+            display: block;
+            opacity: 0;
+            
+            transform: translateZ(300px) rotateX(-30deg);
+            filter: blur(10px);
+            
+            animation: summon3D 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        }
+
+        @keyframes summon3D {
+            0% {
+                opacity: 0;
+                transform: translateZ(300px) rotateX(-30deg);
+                filter: blur(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateZ(0) rotateX(0deg);
+                filter: blur(0);
+            }
+        }
+
+        .l1 { animation-delay: 0.5s; }
+        .l2 { animation-delay: 5.0s; }
+        .l3 { animation-delay: 10.5s; }
+        .l4 { animation-delay: 15.0s; }
+        .l5 { animation-delay: 20.5s; }
+        .l6 { animation-delay: 25.0s; }
+        .l7 { animation-delay: 30.5s; }
+        .l8 { animation-delay: 35.0s; }
+        .l9 { animation-delay: 40.5s; }
+        .l10 { animation-delay: 45.0s; }
+
+    </style>
+</head>
+<body>
+
+    <div class="glass-container">
+        <span class="lyric-line l1">अठरा वर्षांची झाली सगुना</span>
+        <span class="lyric-line l2">अठरा वर्षांची झाली सगुना</span>
+        <span class="lyric-line l3">ओ धनी ओ धनी ओ धनी</span>
+        <span class="lyric-line l4">पोरगा बघाना हिचं लगीन करा ना</span>
+        <span class="lyric-line l5">ही क पोरगा बघाना हिचं लगीन करा ना</span>
+        <span class="lyric-line l6">अठरा वर्षांची झाली सगुना</span>
+        <span class="lyric-line l7">अठरा वर्षांची झाली सगुना</span>
+        <span class="lyric-line l8">ओ धनी ओ धनी ओ धनी</span>
+        <span class="lyric-line l9">पोरगा बघाना हिचं लगीन करा ना</span>
+        <span class="lyric-line l10">ही क पोरगा बघाना हिचं लगीन करा ना..</span>
+    </div>
+
+</body>
+</html>

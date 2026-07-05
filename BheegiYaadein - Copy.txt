@@ -1,0 +1,55 @@
+import sys
+import time
+
+def print_lyrics():
+    lyrics = [
+        "Phir kyun hai yeh tanhai?",
+        "Kaisi hai yeh ruswai?",
+        "Gum ho gaye ham",
+        "Kho gaye ham",
+        "Oo-hoo",
+        "lamhey",
+        "Aandhi ho ya tufaan ho",
+        "Mere mann mein rahe tu sadaa",
+        "Koi apna ho ya paraya ho",
+        "Usse dhoondun mein kahan?",
+        "Phir kyun hai yeh tanhai?",
+        "Kaisi hai yeh ruswai?",
+        "Gum ho gaye ham",
+        "Kho gaye ham",
+        "Oooo",
+        "lamhey, raatein, koi na jaane",
+        "Thi kaisi baatein, woh barsaatein",
+        "Woh bheegi-bheegi yaadein",
+        "Wou bheegi-bheegi yaadein"
+    ]
+    
+
+    delays = [
+        2.8, 2.8, 2.0, 2.5,
+        2.8, 3.0, 3.0, 2.8,
+        3.5, 3.2, 2.5, 3.0,
+        2.5, 3.0, 3.0, 3.4,
+        3.8, 3.9
+    ]
+
+    print("Bheegi Yaadein - \n")
+    time.sleep(1.2)
+
+    for i, line in enumerate(lyrics):
+        for char in line:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            
+            # Speed of the typewriter effect
+            time.sleep(0.06)
+        
+        print()
+        if i < len(delays):
+            time.sleep(delays[i])
+
+if __name__ == "__main__":
+    try:
+        print_lyrics()
+    except KeyboardInterrupt:
+        print("\n[Stopped]")
