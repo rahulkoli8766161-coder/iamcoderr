@@ -1,0 +1,41 @@
+import sys
+import time
+
+def print_lyrics():
+    lyrics = [
+        "Mi rangigau tuna rang ma",
+        "Man udas dur gagan ma",
+        "Tuna sangma vatas bhari",
+        "Tu mana rajkumar",
+        "Mi bani gau rajkumari",
+        "Ooo Tu mana rajkumar",
+        "Mi bani gau rajkumari"
+    ]
+
+    
+    delays = [
+        3.5, 3.8, 
+        3.5, 2.8, 
+        4.5, 3.8, 
+        3.5, 2.2
+    ]
+
+    print("Rajkumari - Shravani More | Ashok Patil | Bhaiya More | Mahi Dawar \n")
+    time.sleep(1.2)
+
+    for i, line in enumerate(lyrics):
+        for char in line:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            
+            time.sleep(0.06)
+        
+        print()
+        if i < len(delays):
+            time.sleep(delays[i])
+
+if __name__ == "__main__":
+    try:
+        print_lyrics()
+    except KeyboardInterrupt:
+        print("\n[Stopped]")
