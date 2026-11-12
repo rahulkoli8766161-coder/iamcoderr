@@ -1,0 +1,44 @@
+"Tere Jeye Hor Disda"
+
+import sys
+import time
+
+def print_lyrics():
+    lyrics = [
+        "Kivein mukhde ton nazran hatawan",
+        "Kivein mukhde ton nazran hatawan",
+        "Nai tera jeya hor disda",
+        "Nai tera jeya hor disda",
+
+        "Dil karda main tainu vekhi jaawan",
+        "Dil karda main tainu vekhi jaawan",
+        "Nai tera jeya hor disda",
+        "Nai tera jeya hor disda",
+    ]
+
+    delays = [
+        3.5, 3.8, 
+        3.5, 2.8, 
+        4.5, 3.8, 
+        3.5, 2.2,
+    ]
+
+    print("Tere Jeya Hor Disda\n")
+    time.sleep(1.2)
+
+    for i, line in enumerate(lyrics):
+        for char in line:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            
+            time.sleep(0.06)
+        
+        print()
+        if i < len(delays):
+            time.sleep(delays[i])
+
+if __name__ == "__main__":
+    try:
+        print_lyrics()
+    except KeyboardInterrupt:
+        print("\n[Stopped]")
