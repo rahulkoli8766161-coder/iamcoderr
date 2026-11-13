@@ -36,11 +36,11 @@ body {
 
 /* --- GLASSMORPHISM --- */
 .apple-glass {
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(16px) saturate(140%);
-    -webkit-backdrop-filter: blur(16px) saturate(140%);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
 }
 
@@ -100,9 +100,9 @@ button {
 
 /* --- CARD LAYOUT --- */
 .pdf-list {
-    display: flex;
-    flex-direction: column;
-    gap: 25px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 16px;
     padding-bottom: 80px;
     margin-top: 30px;
 }
@@ -110,6 +110,8 @@ button {
 .card {
     position: relative;
     padding: 25px;
+    content-visibility: auto;
+    contain-intrinsic-size: auto 150px;
 }
 
 .card h3 {
@@ -126,6 +128,21 @@ button {
 
 a {
     text-decoration: none;
+}
+@media (max-width: 600px) {
+    .pdf-list {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .background-video {
+        display: none;
+    }
 }
 </style>
 </head>
@@ -149,7 +166,7 @@ a {
         <div class="card apple-glass">
             <h3>Char Varisna Pyar - by Ajay Mali</h3>
             <div class="actions">
-                <a href="charvarisnapyar(1).txt" target="_blank">
+                <a href="charvarisnapyar(1).txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="charvarisnapyar(1).txt" download="charvarisnapyar (1).html">
@@ -161,7 +178,7 @@ a {
         <div class="card apple-glass">
             <h3>Baban - Saaj Hyo Tuza (Emotional Verse)</h3>
             <div class="actions">
-                <a href="saaj_hyo_tuza (1).txt" target="_blank">
+                <a href="saaj_hyo_tuza (1).txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="saaj_hyo_tuza (1).txt" download="saaj_hyo_tuza (1).html">
@@ -173,7 +190,7 @@ a {
         <div class="card apple-glass">
             <h3>Sairat Jhaala Ji - by Ajay-Atul</h3>
             <div class="actions">
-                <a href="sairatzalji (1).txt" target="_blank">
+                <a href="sairatzalji (1).txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="sairatzalji (1).txt" download="sairatzalji (1).html">
@@ -185,7 +202,7 @@ a {
         <div class="card apple-glass">
             <h3>Zhumka Davad Nay - Madhuri Saidane</h3>
             <div class="actions">
-                <a href="zumkadavanay (1).txt" target="_blank">
+                <a href="zumkadavanay (1).txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="zumkadavanay (1).txt" download="zumkadavanay (1).html">
@@ -197,7 +214,7 @@ a {
         <div class="card apple-glass">
             <h3>Talwiinder - Wishes (Emotional Verse)</h3>
             <div class="actions">
-                <a href="wishes (1).txt" target="_blank">
+                <a href="wishes (1).txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="wishes (1).txt" download="widhes (1).html">
@@ -209,7 +226,7 @@ a {
         <div class="card apple-glass">
             <h3>Mani Apsara</h3>
             <div class="actions">
-                <a href="ManiApsara.txt" target="_blank">
+                <a href="ManiApsara.txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="ManiApsara.txt" download="ManiApsara">
@@ -221,7 +238,7 @@ a {
         <div class="card apple-glass">
             <h3>changli rangni ka tuni mehendi</h3>
             <div class="actions">
-                <a href="changlirangnikatunimehendi.txt" target="_blank">
+                <a href="changlirangnikatunimehendi.txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="changlirangnikatunimehendi.txt" download="changlirangnikatunimehendi">
@@ -233,7 +250,7 @@ a {
         <div class="card apple-glass">
             <h3>sali pyar karna</h3>
             <div class="actions">
-                <a href="salipyarkarna.txt" target="_blank">
+                <a href="salipyarkarna.txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="salipyarkarna.txt" download="salipyarkarna">
@@ -245,7 +262,7 @@ a {
         <div class="card apple-glass">
             <h3>O Dilbara</h3>
             <div class="actions">
-                <a href="O_Dilbara.txt" target="_blank">
+                <a href="O_Dilbara.txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="O_Dilbara.txt" download="O_Dilbara">
@@ -257,7 +274,7 @@ a {
         <div class="card apple-glass">
             <h3>butterfly</h3>
             <div class="actions">
-                <a href="butterfly.txt" target="_blank">
+                <a href="butterfly.txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="butterfly.txt" download="butterfly">
@@ -269,7 +286,7 @@ a {
         <div class="card apple-glass">
             <h3>Mani sahiba tu</h3>
             <div class="actions">
-                <a href="ManiSahiba.txt" target="_blank">
+                <a href="ManiSahiba.txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="ManiSahiba.txt" download="Mani sahiba tu">
@@ -281,7 +298,7 @@ a {
         <div class="card apple-glass">
             <h3>Dil todi tu gayi</h3>
             <div class="actions">
-                <a href="Diltoditugai.txt" target="_blank">
+                <a href="Diltoditugai.txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="Diltoditugai.txt" download="Dil todi tu gayi">
@@ -293,7 +310,7 @@ a {
         <div class="card apple-glass">
             <h3>Barbaad</h3>
             <div class="actions">
-                <a href="Barbaad.txt" target="_blank">
+                <a href="Barbaad.txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="Barbaad.txt" download="Barbaad">
@@ -305,7 +322,7 @@ a {
         <div class="card apple-glass">
             <h3>Dhadak</h3>
             <div class="actions">
-                <a href="Dhadak.txt" target="_blank">
+                <a href="Dhadak.txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="Dhadak.txt" download="Dhadak">
@@ -317,7 +334,7 @@ a {
         <div class="card apple-glass">
             <h3>Bhuli ja mana dil </h3>
             <div class="actions">
-                <a href="Bulijamanadil.txt" target="_blank">
+                <a href="Bulijamanadil.txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="Bulijamanadil.txt" download="Buli ja mana dil">
@@ -329,7 +346,7 @@ a {
         <div class="card apple-glass">
             <h3>Bheegi Yaadein</h3>
             <div class="actions">
-                <a href="BheegiYaadein.txt" target="_blank">
+                <a href="BheegiYaadein.txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="BheegiYaadein.txt" download="Bheegi Yaadein ">
@@ -341,7 +358,7 @@ a {
         <div class="card apple-glass">
             <h3>Chamke shivabachi talavar</h3>
             <div class="actions">
-                <a href="chamkeshivabachitalavar.txt" target="_blank">
+                <a href="chamkeshivabachitalavar.txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="chamkeshivabachitalavar.txt" download="Chamke shivabachi talavar">
@@ -353,7 +370,7 @@ a {
         <div class="card apple-glass">
             <h3>Sawan mahina ma</h3>
             <div class="actions">
-                <a href="Sawanmahinama.txt" target="_blank">
+                <a href="Sawanmahinama.txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="Sawanmahinama.txt" download="Sawan mahina ma">
@@ -365,7 +382,7 @@ a {
         <div class="card apple-glass">
             <h3>18 varshachi zali saguna</h3>
             <div class="actions">
-                <a href="18varshachizalisaguna.txt" target="_blank">
+                <a href="18varshachizalisaguna.txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="18varshachizalisaguna.txt" download="18 varshachi zali saguna">
@@ -377,7 +394,7 @@ a {
         <div class="card apple-glass">
             <h3>Bangles</h3>
             <div class="actions">
-                <a href="Bangles.txt" target="_blank">
+                <a href="Bangles.txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="Bangles.txt" download="Bangles">
@@ -389,7 +406,7 @@ a {
         <div class="card apple-glass">
             <h3>O Sajani re</h3>
             <div class="actions">
-                <a href="OSajanire.txt" target="_blank">
+                <a href="OSajanire.txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="OSajanire.txt" download="O Sajani re">
@@ -401,7 +418,7 @@ a {
         <div class="card apple-glass">
             <h3>Midnight</h3>
             <div class="actions">
-                <a href="midmight.txt" target="_blank">
+                <a href="midmight.txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="midmight.txt" download="Midnight">
@@ -414,7 +431,7 @@ a {
         <div class="card apple-glass">
             <h3>rajkumari</h3>
             <div class="actions">
-                <a href="rajkumari.txt" target="_blank">
+                <a href="rajkumari.txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="rajkumari.txt" download="rajkumari">
@@ -426,7 +443,7 @@ a {
         <div class="card apple-glass">
             <h3>Tere Jeye Hor Disda</h3>
             <div class="actions">
-                <a href="Tere%20Jeye%20Hor%20Disda.txt" target="_blank">
+                <a href="Tere%20Jeye%20Hor%20Disda.txt" target="_blank" rel="noopener noreferrer">
                     <button class="view-btn">View</button>
                 </a>
                 <a href="Tere%20Jeye%20Hor%20Disda.txt" download="Tere Jeye Hor Disda.txt">
